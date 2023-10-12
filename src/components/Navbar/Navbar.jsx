@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className={style.container}>
       <div className={style.naving}>
         <a href="#">
-          <h2 className={style.brand}>EMBLEMA</h2>
+          <h1 className={style.brand}>EMBLEMA</h1>
         </a>
         <div className={style["right-nav"]}>
           <p>Menu</p>
