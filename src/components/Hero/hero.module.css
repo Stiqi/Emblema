@@ -1,0 +1,26 @@
+.container {
+  background: var(--purple-bg);
+  background: var(--purple-gradient);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: end;
+}
+
+.title {
+  margin-left: 10%;
+  font-size: 20vh;
+  font-family: var(--title-font);
+  text-shadow: 4px 1px 0 rgb(77, 1, 112), 8px 2px 0 rgb(116, 0, 139);
+}
+
+@media screen and (max-width: 475px) {
+  .container {
+    align-items: center;
+  }
+  .title {
+    margin-left: 5%;
+    margin-bottom: 10%;
+    font-size: 40vw;
+  }
+}

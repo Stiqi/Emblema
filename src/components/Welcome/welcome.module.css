@@ -1,0 +1,33 @@
+.welcome-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.welcome {
+  font-size: 2em;
+  width: 50%;
+}
+
+.welcome-img {
+  width: 50%;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 475px) {
+  .welcome-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .welcome {
+    width: 100%;
+    font-size: 1.5em;
+  }
+
+  .welcome-img {
+    width: 100%;
+    border-radius: 20px;
+  }
+}

@@ -1,0 +1,47 @@
+.container {
+  background-color: var(--black-back);
+  color: var(--font-white);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  font-size: 2em;
+  font-family: var(--title-font);
+}
+
+.brand:hover {
+  background-color: var(--purple-background);
+  background: var(--purple-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: 0.5s;
+}
+
+.naving {
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+@media screen and (max-width: 475px) {
+  .container {
+    padding: 0;
+  }
+
+  .naving {
+    flex-direction: column;
+    padding-bottom: 0.5em;
+  }
+}

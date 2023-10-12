@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
+
+:root {
+  font-family: Gabarito, sans-serif;
+  --title-font: "Racing Sans One";
+  --black-back: #222;
+  --font-white: #ddd;
+  --purple-background: rgb(175, 4, 243);
+  --purple-gradient: linear-gradient(
+    0deg,
+    rgba(175, 4, 243, 1) 0%,
+    rgba(88, 4, 243, 1) 100%
+  );
+  background-color: #131211;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.search-icon {
+  width: 1.8em;
+  height: 1.8em;
+  padding: 0 0.5em;
+  fill: var(--font-white);
+  cursor: pointer;
+}
+
+body {
+  overflow: auto;
+}
