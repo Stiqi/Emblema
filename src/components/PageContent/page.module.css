@@ -21,4 +21,7 @@
 }
 
 @media screen and (max-width: 475px) {
+  .pagebody {
+    padding: 32px 1em;
+  }
 }

@@ -1,0 +1,30 @@
+.title {
+  font-size: 2.5em;
+  padding: 8px 0;
+  position: relative;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 8px;
+  background: var(--purple-gradient-horizontal);
+  z-index: -1;
+}
+
+@media screen and (max-width: 975px) {
+  .publicaciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas con igual ancho */
+    grid-template-rows: auto; /* Altura automática para las filas */
+    gap: 10px; /* Espacio entre las celdas */
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .publicaciones {
+    grid-template-columns: 1fr;
+  }
+}

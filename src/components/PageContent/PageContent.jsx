@@ -1,11 +1,13 @@
 import Welcome from "../Welcome/Welcome";
+import Publicaciones from "../Publicaciones/Publicaciones";
 import style from "./page.module.css";
 
 const PageContent = () => {
   return (
-    <div className={style.pagebody}>
+    <main className={style.pagebody}>
       <Welcome />
-    </div>
+      <Publicaciones />
+    </main>
   );
 };
 

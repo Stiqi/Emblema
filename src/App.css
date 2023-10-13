@@ -3,12 +3,17 @@
 
 :root {
   font-family: Gabarito, sans-serif;
-  --title-font: "Racing Sans One";
+  --title-font: "Racing Sans One", sans-serif;
   --black-back: #222;
   --font-white: #ddd;
   --purple-background: rgb(175, 4, 243);
   --purple-gradient: linear-gradient(
     0deg,
+    rgba(175, 4, 243, 1) 0%,
+    rgba(88, 4, 243, 1) 100%
+  );
+  --purple-gradient-horizontal: linear-gradient(
+    45deg,
     rgba(175, 4, 243, 1) 0%,
     rgba(88, 4, 243, 1) 100%
   );

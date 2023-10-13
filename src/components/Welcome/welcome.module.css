@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 32px;
+  margin-bottom: 4em;
 }
 
 .welcome {
@@ -19,6 +20,7 @@
   .welcome-container {
     flex-direction: column;
     text-align: center;
+    gap: 16px;
   }
 
   .welcome {
