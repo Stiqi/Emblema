@@ -3,6 +3,7 @@
 
 :root {
   font-family: Gabarito, sans-serif;
+  --text-font: Gabarito, sans-serif;
   --title-font: "Racing Sans One", sans-serif;
   --black-back: #222;
   --font-white: #ddd;
@@ -35,7 +36,7 @@ a:visited {
   color: inherit;
 }
 
-.search-icon {
+.icon {
   width: 1.8em;
   height: 1.8em;
   padding: 0 0.5em;

@@ -4,7 +4,8 @@
   width: 100%;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 50;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.25);
 }
 
 .brand {
@@ -28,20 +29,9 @@
   align-items: center;
 }
 
-.right-nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100%;
-}
-
 @media screen and (max-width: 975px) {
   .container {
     padding: 0;
-  }
-
-  .right-nav {
-    justify-content: center;
   }
 
   .naving {

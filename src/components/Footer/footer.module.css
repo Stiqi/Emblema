@@ -1,0 +1,8 @@
+.container {
+  margin-top: 2em;
+  background: var(--purple-gradient-horizontal);
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-around;
+  color: var(--font-white);
+}

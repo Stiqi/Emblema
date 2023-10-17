@@ -1,16 +1,30 @@
+import { useEffect, useState } from "react";
 import "./App.css";
-import Hero from "./components/Hero/Hero";
-import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
 import PageContent from "./components/PageContent/PageContent.jsx";
+import Footer from "../src/components/Footer/Footer.jsx";
 
 function App() {
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowContent(true);
+    }, 1500);
+  }, []);
+
   return (
     <>
-      <header>
+      {showContent ? (
+        <>
+          <Navbar />
+          <PageContent />
+          <Footer />
+        </>
+      ) : (
         <Hero />
-      </header>
-      <Navbar />
-      <PageContent />
+      )}
     </>
   );
 }

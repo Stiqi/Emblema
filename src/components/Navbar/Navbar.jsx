@@ -8,10 +8,7 @@ const Navbar = () => {
         <a href="#">
           <h1 className={style.brand}>EMBLEMA</h1>
         </a>
-        <div className={style["right-nav"]}>
-          <p>Menu</p>
-          <Searchbar />
-        </div>
+        <Searchbar />
       </div>
     </nav>
   );

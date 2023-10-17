@@ -1,5 +1,6 @@
 .barra {
   border-radius: 5px;
-  padding: 0.2em;
+  padding: 0.2em 1em;
   min-width: 200px;
+  font-family: var(--text-font);
 }

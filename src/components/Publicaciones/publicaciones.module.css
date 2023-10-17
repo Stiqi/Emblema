@@ -17,9 +17,9 @@
 @media screen and (max-width: 975px) {
   .publicaciones {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas con igual ancho */
-    grid-template-rows: auto; /* Altura automática para las filas */
-    gap: 10px; /* Espacio entre las celdas */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
   }
 }
 

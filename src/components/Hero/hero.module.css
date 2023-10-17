@@ -8,7 +8,7 @@
   position: relative;
 }
 
-.container::before {
+.container::after {
   position: absolute;
   content: "";
   background-image: url("/src/assets/imgs/capybara.png");
