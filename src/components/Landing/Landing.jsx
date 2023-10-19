@@ -1,8 +1,8 @@
 import Welcome from "../Welcome/Welcome";
 import Publicaciones from "../Publicaciones/Publicaciones";
-import style from "./page.module.css";
+import style from "./landing.module.css";
 
-const PageContent = () => {
+const Landing = () => {
   return (
     <main className={style.pagebody}>
       <Welcome />
@@ -11,4 +11,4 @@ const PageContent = () => {
   );
 };
 
-export default PageContent;
+export default Landing;

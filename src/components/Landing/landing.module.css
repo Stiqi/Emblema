@@ -1,5 +1,5 @@
 .pagebody {
-  padding: 64px 10% 0 10%;
+  padding: 32px 10% 0 10%;
   color: var(--font-white);
   position: relative;
 }
@@ -20,7 +20,7 @@
   z-index: -10;
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 675px) {
   .pagebody {
     padding: 32px 2em;
   }

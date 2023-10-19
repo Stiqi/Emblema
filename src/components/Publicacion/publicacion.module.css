@@ -16,7 +16,7 @@
   width: 100%;
 }
 
-.texto-container > button {
+.ver-mas {
   cursor: pointer;
   width: 60%;
   padding: 8px 16px;
@@ -26,9 +26,10 @@
   background-color: rgba(230, 230, 230, 0.2);
   font-family: var(--title-font);
   font-size: 1.2em;
+  text-align: center;
 }
 
-.texto-container > button:hover {
+.ver-mas:hover {
   transition: 0.5s;
   background-color: var(--purple-background);
   color: var(--black-back);

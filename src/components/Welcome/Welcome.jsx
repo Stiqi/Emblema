@@ -5,7 +5,7 @@ const Welcome = () => {
   return (
     <div className={style["welcome-container"]}>
       <div className={style.welcome}>
-        <h2>Bienvenidx!</h2>
+        <h2 className="title">Bienvenidx!</h2>
         <p>
           este es un blog autogestivo que busca explorar e informar sobre
           diversos temas de la cultura y sociedad rosarina.

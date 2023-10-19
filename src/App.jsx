@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Hero from "./components/Hero/Hero.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
-import PageContent from "./components/PageContent/PageContent.jsx";
+import Landing from "./components/Landing/Landing.jsx";
 import Footer from "../src/components/Footer/Footer.jsx";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 function App() {
   const [showContent, setShowContent] = useState(false);
@@ -17,11 +18,13 @@ function App() {
   return (
     <>
       {showContent ? (
-        <>
+        <BrowserRouter>
           <Navbar />
-          <PageContent />
+          <Routes>
+            <Route exact path={"/"} element={<Landing />} />
+          </Routes>
           <Footer />
-        </>
+        </BrowserRouter>
       ) : (
         <Hero />
       )}

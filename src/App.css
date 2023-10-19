@@ -28,6 +28,10 @@
   text-decoration: none;
 }
 
+button {
+  background: none;
+}
+
 a {
   color: var(--font-white);
 }
@@ -37,13 +41,30 @@ a:visited {
 }
 
 .icon {
-  width: 1.8em;
-  height: 1.8em;
+  width: 2em;
   padding: 0 0.5em;
+  margin: auto 0;
   fill: var(--font-white);
   cursor: pointer;
 }
 
 body {
   overflow: auto;
+}
+
+.icon {
+  transition: 500ms;
+  height: 100%;
+}
+
+.icon:hover {
+  scale: 1.1;
+}
+
+.title {
+  background-color: var(--purple-background);
+  background: var(--purple-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }

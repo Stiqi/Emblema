@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 32px;
-  margin-bottom: 4em;
+  margin-bottom: 32px;
 }
 
 .welcome {
@@ -16,7 +16,7 @@
   border-radius: 20px;
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 675px) {
   .welcome-container {
     flex-direction: column;
     text-align: center;
