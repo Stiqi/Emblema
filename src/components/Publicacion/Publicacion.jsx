@@ -3,7 +3,7 @@ import styles from "./publicacion.module.css";
 
 const Publicacion = ({ nota, index }) => {
   return (
-    <div className={`${styles.container} ${index % 2 != 0 && styles.par}`}>
+    <article className={`${styles.container} ${index % 2 != 0 && styles.par}`}>
       <div className={styles["image-container"]}>
         <img src={nota.imagen} alt="" className={styles.image} />
         <div className={styles.info}>
@@ -16,7 +16,7 @@ const Publicacion = ({ nota, index }) => {
           Ver Más
         </Link>
       </div>
-    </div>
+    </article>
   );
 };
 

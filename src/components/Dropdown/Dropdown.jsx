@@ -1,11 +1,11 @@
 import { useState } from "react";
 import styles from "./dropdown.module.css";
 import MenuIcon from "../../assets/icons/MenuIcon";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import publicaciones from "../../data/publicaciones";
 
 const getCategories = () => {
-  let a = publicaciones.map((i) => i.categoria);
+  let a = publicaciones.map((i) => i.category);
   return [...new Set(a)];
 };
 
@@ -32,16 +32,25 @@ const Dropdown = () => {
       >
         {getCategories().map((cat, index) => {
           return (
-            <Link key={index} to={`/category/${cat}`}>
+            <NavLink
+              key={index}
+              to={`/category/${cat}`}
+              onClick={toggleDropdown}
+            >
               <li>{capitalize(cat)}</li>
-            </Link>
+            </NavLink>
           );
         })}
-        <Link to={"/contacto"}>
-          <li style={{ backgroundColor: "rgba(255,255,255,.1)" }}>
-            <strong>Contacto</strong>
+        <NavLink to={"/contacto"}>
+          <li className={styles.highlighted} onClick={toggleDropdown}>
+            Contacto
           </li>
-        </Link>
+        </NavLink>
+        <NavLink to={"/about"}>
+          <li className={styles.highlighted} onClick={toggleDropdown}>
+            Sobre Nosotros
+          </li>
+        </NavLink>
       </ul>
     </div>
   );

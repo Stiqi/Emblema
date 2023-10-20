@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Publicacion from "../Publicacion/Publicacion";
 import publicaciones from "../../data/publicaciones";
 import style from "./publicaciones.module.css";
+import { useParams } from "react-router-dom";
 
 const notasPromise = new Promise((response, reject) => {
   setTimeout(() => {
@@ -11,8 +12,14 @@ const notasPromise = new Promise((response, reject) => {
   }, 500);
 });
 
+const capitalize = (str) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
 const Publicaciones = () => {
   const [notas, setNotas] = useState([]);
+  const [filteredNotas, setFilteredNotas] = useState([]);
+  const { categoryId } = useParams();
 
   useEffect(() => {
     notasPromise
@@ -22,16 +29,30 @@ const Publicaciones = () => {
       });
   }, []);
 
+  const filterNotas = (notas) => {
+    categoryId
+      ? setFilteredNotas(
+          notas.filter((nota) => nota.category.includes(categoryId))
+        )
+      : setFilteredNotas(notas);
+  };
+
+  useEffect(() => {
+    filterNotas(notas);
+  }, [categoryId, notas]);
+
   return (
-    <div>
-      <h3 className={style.title}>Publicaciones</h3>
+    <section id="publicaciones">
+      <h3 className={style.title}>
+        {categoryId ? capitalize(categoryId) : "Publicaciones"}
+      </h3>
       <div className={style.publicaciones}>
-        {notas.length > 0 &&
-          notas.map((nota, index) => (
+        {filteredNotas.length > 0 &&
+          filteredNotas.map((nota, index) => (
             <Publicacion key={nota.id} nota={nota} index={index} />
           ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 import Landing from "./components/Landing/Landing.jsx";
 import Footer from "../src/components/Footer/Footer.jsx";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+import CategoryPage from "./components/CategoryPage/CategoryPage";
+import About from "./components/About/About";
 
 function App() {
   const [showContent, setShowContent] = useState(false);
@@ -22,6 +24,12 @@ function App() {
           <Navbar />
           <Routes>
             <Route exact path={"/"} element={<Landing />} />
+            <Route
+              exact
+              path={"/category/:categoryId"}
+              element={<CategoryPage />}
+            />
+            <Route exact path={"/about"} element={<About />} />
           </Routes>
           <Footer />
         </BrowserRouter>
